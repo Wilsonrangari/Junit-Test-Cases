@@ -43,11 +43,11 @@ class ProjectApplicationTests {
 
     @Test
     void UserSavedBelow_18_TestCase() {
-        User user = new User("Wilson", 19, "w@gmail.com");
+        User user = new User("Wilson", 17, "w@gmail.com");
 
         userService.addUser(user); // Act
         // Assert
-        verify(userRepository, times(1)).save(user);
+        verify(userRepository, times(0)).save(user);
         // Assertions.assertEquals(1, userRepository.save(););
 
     }
